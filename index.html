@@ -21,320 +21,145 @@
     <div id="screen-welcome" class="max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-teal-100">
         <div class="text-6xl mb-4">🌍✨</div>
         <h1 class="text-4xl md:text-5xl font-bold mb-4 gradient-text">Global Impact Quest</h1>
-        <p class="text-lg text-gray-600 mb-8">Ready to change the world but don't know where to start? Let's find your ultimate inquiry project!</p>
+        <p class="text-lg text-gray-600 mb-8">Ready to change the world? Let's find your ultimate inquiry project!</p>
         <button onclick="showScreen('screen-goal')" class="bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-bold text-xl py-4 px-8 rounded-full shadow-lg card-pop w-full md:w-auto">
             Let's Go! 🚀
         </button>
     </div>
 
-    <!-- Screen 2: Global Goal Selection -->
+    <!-- Screen 2: Goal -->
     <div id="screen-goal" class="hidden max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-blue-100">
-        <h2 class="text-3xl font-bold mb-2">Step 1: Pick Your Vibe 🎯</h2>
-        <p class="text-gray-600 mb-6">Which of these big global missions do you care about the most?</p>
+        <h2 class="text-3xl font-bold mb-6">Step 1: Pick Your Vibe 🎯</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <button onclick="setGoal('Nature Ninja (SDGs 13-15)')" class="bg-green-100 border-2 border-green-300 p-6 rounded-2xl card-pop text-left">
-                <div class="text-4xl mb-2">🌳🐢</div>
+                <div class="text-4xl mb-2">🌳</div>
                 <h3 class="text-xl font-bold text-green-800">Nature Ninja</h3>
-                <p class="text-sm text-green-700">Protecting oceans, saving animals, and fighting climate change.</p>
             </button>
             <button onclick="setGoal('Hauora Hero (SDG 3)')" class="bg-rose-100 border-2 border-rose-300 p-6 rounded-2xl card-pop text-left">
-                <div class="text-4xl mb-2">❤️🧘‍♀️</div>
+                <div class="text-4xl mb-2">❤️</div>
                 <h3 class="text-xl font-bold text-rose-800">Wellness Hero</h3>
-                <p class="text-sm text-rose-700">Mental health, physical wellbeing, and healthy communities.</p>
             </button>
             <button onclick="setGoal('Equality Champion (SDGs 5, 10)')" class="bg-purple-100 border-2 border-purple-300 p-6 rounded-2xl card-pop text-left">
-                <div class="text-4xl mb-2">🤝🌈</div>
+                <div class="text-4xl mb-2">🤝</div>
                 <h3 class="text-xl font-bold text-purple-800">Equality Champion</h3>
-                <p class="text-sm text-purple-700">Fairness for everyone, fighting discrimination, and equal rights.</p>
             </button>
             <button onclick="setGoal('Innovation Explorer (SDGs 9, 11)')" class="bg-amber-100 border-2 border-amber-300 p-6 rounded-2xl card-pop text-left">
-                <div class="text-4xl mb-2">💡🏙️</div>
+                <div class="text-4xl mb-2">💡</div>
                 <h3 class="text-xl font-bold text-amber-800">Innovation Explorer</h3>
-                <p class="text-sm text-amber-700">Cool tech, building better cities, and solving puzzles.</p>
             </button>
         </div>
     </div>
 
-    <!-- Screen 3: Subject Selection -->
+    <!-- Screen 3: Subject -->
     <div id="screen-subject" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-indigo-100">
-        <h2 class="text-3xl font-bold mb-2">Step 2: Link Your Learning 📚</h2>
-        <p class="text-gray-600 mb-6">What class or subject are you doing this inquiry for?</p>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <button onclick="setSubject('Science')" class="bg-indigo-50 border-2 border-indigo-200 p-4 rounded-xl card-pop font-bold text-indigo-700">Science 🔬</button>
-            <button onclick="setSubject('Maths')" class="bg-indigo-50 border-2 border-indigo-200 p-4 rounded-xl card-pop font-bold text-indigo-700">Maths ➗</button>
-            <button onclick="setSubject('English')" class="bg-indigo-50 border-2 border-indigo-200 p-4 rounded-xl card-pop font-bold text-indigo-700">English ✍️</button>
-            <button onclick="setSubject('Social Studies')" class="bg-indigo-50 border-2 border-indigo-200 p-4 rounded-xl card-pop font-bold text-indigo-700">Social Studies 🗺️</button>
+        <h2 class="text-3xl font-bold mb-6">Step 2: Link Your Learning 📚</h2>
+        <div class="grid grid-cols-2 gap-4">
+            <button onclick="setSubject('Science')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">Science 🔬</button>
+            <button onclick="setSubject('Maths')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">Maths ➗</button>
+            <button onclick="setSubject('English')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">English ✍️</button>
+            <button onclick="setSubject('Social Studies')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">Social Studies 🗺️</button>
         </div>
     </div>
 
-    <!-- Screen 4: Path Choice -->
+    <!-- Screen 4: Path -->
     <div id="screen-path" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-orange-100">
         <h2 class="text-3xl font-bold mb-6">Step 3: Choose Your Path 🛤️</h2>
-        <div class="space-y-4">
-            <button onclick="showScreen('screen-idea')" class="w-full bg-orange-100 border-2 border-orange-300 p-6 rounded-2xl card-pop flex items-center justify-between">
-                <div class="text-left">
-                    <h3 class="text-xl font-bold text-orange-800">Turbocharge My Idea ⚡</h3>
-                    <p class="text-sm text-orange-700">I already have a specific problem in mind!</p>
-                </div>
-                <div class="text-3xl">📝</div>
-            </button>
-            <button onclick="startJourney()" class="w-full bg-sky-100 border-2 border-sky-300 p-6 rounded-2xl card-pop flex items-center justify-between">
-                <div class="text-left">
-                    <h3 class="text-xl font-bold text-sky-800">Help Me Find My Passion 🧭</h3>
-                    <p class="text-sm text-sky-700">I need help narrowing down a topic.</p>
-                </div>
-                <div class="text-3xl">🤔</div>
-            </button>
-        </div>
+        <button onclick="showScreen('screen-idea')" class="w-full bg-orange-100 p-6 rounded-2xl mb-4 text-left border-2 border-orange-200">Turbocharge My Idea ⚡</button>
+        <button onclick="startJourney()" class="w-full bg-sky-100 p-6 rounded-2xl text-left border-2 border-sky-200">Help Me Find My Passion 🧭</button>
     </div>
 
-    <!-- Screen 5: Type Idea (Fast Track) -->
+    <!-- Screen 5: Idea -->
     <div id="screen-idea" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-pink-100">
-        <h2 class="text-3xl font-bold mb-2">What's on your mind? 🧠</h2>
-        <p class="text-gray-600 mb-6">Type the issue you've noticed in your community or the world.</p>
-        <textarea id="user-idea" class="w-full h-32 p-4 border-2 border-gray-200 rounded-xl mb-4 focus:outline-none focus:border-pink-400" placeholder="e.g., Too much plastic in our local river, or students feeling stressed during exams..."></textarea>
-        <button onclick="submitIdea()" class="bg-pink-500 text-white font-bold text-lg py-3 px-8 rounded-full shadow-lg card-pop w-full">
-            Send to AI Co-Pilot ✨
-        </button>
+        <h2 class="text-3xl font-bold mb-6">What's on your mind? 🧠</h2>
+        <textarea id="user-idea" class="w-full h-32 p-4 border-2 rounded-xl mb-4" placeholder="Describe the problem you want to solve..."></textarea>
+        <button onclick="submitIdea()" class="bg-pink-500 text-white font-bold py-3 px-8 rounded-full w-full">Send to AI</button>
     </div>
 
-    <!-- Screen 6: Quiz Journey (Multi-step) -->
+    <!-- Screen 6: Quiz -->
     <div id="screen-quiz" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-yellow-100">
-        <div class="text-sm text-yellow-600 font-bold mb-2 tracking-widest uppercase" id="quiz-progress">Question 1</div>
-        <h2 id="quiz-question" class="text-2xl font-bold mb-6 text-gray-800">Loading question...</h2>
-        <div id="quiz-options" class="space-y-4">
-            <!-- Options injected by JS -->
-        </div>
+        <div id="quiz-progress" class="text-sm text-yellow-600 font-bold mb-2">Question 1/5</div>
+        <h2 id="quiz-question" class="text-2xl font-bold mb-6 text-gray-800">Loading...</h2>
+        <div id="quiz-options" class="space-y-4"></div>
     </div>
 
-    <!-- Screen 7: Loading AI -->
+    <!-- Screen 7: Loading -->
     <div id="screen-loading" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-purple-100">
         <div class="text-6xl mb-4 animate-bounce">🤖</div>
-        <h2 class="text-3xl font-bold mb-2 text-purple-800">AI Co-Pilot is Thinking...</h2>
-        <p class="text-gray-600">Generating your ultimate inquiry questions based on your choices!</p>
+        <h2 class="text-2xl font-bold">AI Co-Pilot is Thinking...</h2>
     </div>
 
-    <!-- Screen 8: Results / Errors -->
-    <div id="screen-results" class="hidden max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 border-4 border-emerald-100">
-        <div class="text-center mb-6">
-            <div class="text-5xl mb-2">🎉</div>
-            <h2 class="text-3xl font-bold text-emerald-800">Your Inquiry Mission!</h2>
-            <p class="text-gray-600">Here are 3 "How might we..." questions tailored just for you.</p>
-        </div>
-        <div id="ai-response-container" class="bg-gray-50 p-6 rounded-2xl border-2 border-gray-100 text-gray-800 whitespace-pre-wrap text-left font-medium leading-relaxed">
-            <!-- AI Output goes here -->
-        </div>
-        <div class="text-center mt-8">
-            <button onclick="location.reload()" class="bg-gray-200 text-gray-700 font-bold py-2 px-6 rounded-full hover:bg-gray-300 transition">
-                Start Over
-            </button>
-        </div>
+    <!-- Screen 8: Results -->
+    <div id="screen-results" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 border-4 border-emerald-100">
+        <h2 class="text-3xl font-bold text-emerald-800 mb-4">Your Inquiry Mission!</h2>
+        <div id="ai-response-container" class="text-left font-medium leading-relaxed p-4 bg-gray-50 rounded-xl"></div>
+        <button onclick="location.reload()" class="mt-8 bg-gray-200 py-2 px-6 rounded-full">Start Over</button>
     </div>
 
     <script>
-        // Game State
-        let state = {
-            goal: '',
-            subject: '',
-            idea: '',
-            quizIndex: 0,
-            journeyPath: []
-        };
-
-        // Expanded Multi-Step Journey Data
+        let state = { goal: '', subject: '', idea: '', quizIndex: 0, journeyPath: [] };
+        
         const quizData = {
             'Nature Ninja (SDGs 13-15)': [
-                { 
-                    text: "Where do you want to focus your nature mission?", 
-                    options: [
-                        { text: "Oceans, beaches, and rivers", emoji: "🌊", issue: "marine environments and waterways" },
-                        { text: "Forests, bush, and native trees", emoji: "🌲", issue: "forests and native plant life" },
-                        { text: "Animals and wildlife", emoji: "🐾", issue: "animal protection and biodiversity" },
-                        { text: "City parks and urban nature", emoji: "🏙️", issue: "green spaces in our cities" }
-                    ]
-                },
-                { 
-                    text: "What feels like the biggest villain in this area right now?", 
-                    options: [
-                        { text: "Plastic and rubbish everywhere", emoji: "🗑️", issue: "plastic waste and pollution" },
-                        { text: "Climate change and weird weather", emoji: "🌪️", issue: "the impacts of climate change" },
-                        { text: "Humans taking up too much space", emoji: "🏗️", issue: "habitat destruction from building" },
-                        { text: "Toxic chemicals and dirty water", emoji: "🧪", issue: "chemical pollution and contamination" }
-                    ]
-                }
+                { text: "1/5 Where do I see the most damage to nature?", options: [{text: "Our oceans and beaches are being trashed. 🌊", issue: "marine pollution"}, {text: "Our forests and bush are disappearing. 🌲", issue: "deforestation"}, {text: "Native animals are losing their homes. 🐢", issue: "habitat loss"}, {text: "The city air and water are dirty. 🏙️", issue: "urban environmental degradation"}]},
+                { text: "2/5 What is the biggest threat here?", options: [{text: "Plastic waste clogging ecosystems. 🗑️", issue: "plastic pollution"}, {text: "Climate change and weird weather. 🌪️", issue: "climate change"}, {text: "Buildings taking over habitats. 🏗️", issue: "habitat loss"}, {text: "Water pollution from chemicals. 🧪", issue: "water toxicity"}]},
+                { text: "3/5 Who are we standing up for?", options: [{text: "Our local neighborhood community. 🏡", issue: "local communities"}, {text: "The generations of the future. ⏳", issue: "future generations"}, {text: "The animals who can't speak. 🐾", issue: "animal rights"}, {text: "Our school environment. 🏫", issue: "the school environment"}]},
+                { text: "4/5 How do I want to take action?", options: [{text: "Building cool tech or tools. 🛠️", issue: "technological engineering"}, {text: "Running campaigns and advocating. 📣", issue: "social advocacy"}, {text: "Doing scientific experiments. 🔬", issue: "scientific investigation"}, {text: "Creating art or stories to explain it. 🎨", issue: "creative communication"}]},
+                { text: "5/5 What would success look like?", options: [{text: "Restoring nature to its natural state. ✨", issue: "ecosystem restoration"}, {text: "Changing a law or school rule. ⚖️", issue: "policy reform"}, {text: "Creating a new innovation that helps. 💡", issue: "technological innovation"}, {text: "Getting the community involved. 🤝", issue: "community activism"}]}
             ],
             'Hauora Hero (SDG 3)': [
-                { 
-                    text: "Who do you want to help the most?", 
-                    options: [
-                        { text: "My friends and classmates", emoji: "🎒", issue: "teenagers at my school" },
-                        { text: "Younger kids", emoji: "🧸", issue: "children and youth" },
-                        { text: "My family and whānau", emoji: "👨‍👩‍👧‍👦", issue: "families in my community" },
-                        { text: "The whole neighbourhood", emoji: "🏘️", issue: "the general public" }
-                    ]
-                },
-                { 
-                    text: "What is the main challenge they are facing?", 
-                    options: [
-                        { text: "Feeling super stressed or anxious", emoji: "😥", issue: "mental health and stress management" },
-                        { text: "Eating junk food instead of healthy stuff", emoji: "🍔", issue: "healthy eating and nutrition access" },
-                        { text: "Not getting enough exercise or sports", emoji: "🏃", issue: "physical activity and fitness" },
-                        { text: "Feeling lonely or spending too much time on screens", emoji: "📱", issue: "screen time addiction and social isolation" }
-                    ]
-                }
+                { text: "1/5 Where do I see people struggling the most?", options: [{text: "Kids at school feel really down or stressed. 🎒", issue: "teen mental health"}, {text: "People in my family don't look after themselves. 👨‍👩‍👧‍👦", issue: "family wellness"}, {text: "People in our town are lonely or excluded. 🏘️", issue: "social isolation"}, {text: "Everyone seems running on empty and tired. 🏃", issue: "general wellbeing"}]},
+                { text: "2/5 What is the main challenge they face?", options: [{text: "Feeling stressed, anxious, or overwhelmed. 😥", issue: "mental health"}, {text: "Not having healthy food to eat. 🥗", issue: "nutrition access"}, {text: "Not being active enough. 🏃", issue: "physical fitness"}, {text: "Spending too much time on screens. 📱", issue: "digital wellbeing"}]},
+                { text: "3/5 Where do we want to make change?", options: [{text: "Here at our school. 🏫", issue: "education setting"}, {text: "In people's homes. 🏠", issue: "domestic setting"}, {text: "In digital online spaces. 🌐", issue: "digital environments"}, {text: "In public parks or clubs. ⚽", issue: "recreational spaces"}]},
+                { text: "4/5 How do I want to help?", options: [{text: "By mentoring or talking to others. 🗣️", issue: "peer mentoring"}, {text: "By building a digital app or tool. 💻", issue: "digital tools"}, {text: "By organizing fun events. 🎉", issue: "social events"}, {text: "By raising awareness. 📢", issue: "awareness campaigns"}]},
+                { text: "5/5 What do we want to see happen?", options: [{text: "People feeling genuinely happier. 😊", issue: "improved wellbeing"}, {text: "Better daily habits and routines. 📅", issue: "behavioral change"}, {text: "A reduction in stress levels. 🧘", issue: "stress reduction"}, {text: "Stronger social connections. 🤝", issue: "community connection"}]}
             ],
             'Equality Champion (SDGs 5, 10)': [
-                { 
-                    text: "Which fairness issue gets you fired up?", 
-                    options: [
-                        { text: "People treated differently because of their race or culture", emoji: "🌍", issue: "racial equality and cultural respect" },
-                        { text: "Boys and girls not getting the same chances", emoji: "⚖️", issue: "gender equality and breaking stereotypes" },
-                        { text: "People not having enough money for basic needs", emoji: "💰", issue: "poverty and economic inequality" },
-                        { text: "People with disabilities being left out", emoji: "♿", issue: "accessibility and inclusion for disabilities" }
-                    ]
-                },
-                { 
-                    text: "Where do you see this unfairness happening the most?", 
-                    options: [
-                        { text: "Right here at school or in class", emoji: "🏫", issue: "within the education system" },
-                        { text: "Online and on social media", emoji: "💻", issue: "in digital spaces and cyberbullying" },
-                        { text: "In sports, clubs, or hobbies", emoji: "⚽", issue: "in extracurricular activities" },
-                        { text: "On the news happening globally", emoji: "📺", issue: "on a wider societal level" }
-                    ]
-                }
+                { text: "1/5 Where do I see people treated unfairly?", options: [{text: "At school, where some kids get left out. 🏫", issue: "school inequality"}, {text: "Online, where people are mean or biased. 💻", issue: "digital exclusion"}, {text: "In sports and clubs where some don't have a chance. 🏏", issue: "unfair competition"}, {text: "In the wider world where people are treated differently. 📺", issue: "systemic injustice"}]},
+                { text: "2/5 Where is the problem most visible?", options: [{text: "In the school system. 🏫", issue: "the education system"}, {text: "On social media platforms. 💻", issue: "digital media bias"}, {text: "In sports and clubs. 🏏", issue: "extracurricular activities"}, {text: "In society and the news. 📺", issue: "global society"}]},
+                { text: "3/5 Who are we standing up for?", options: [{text: "My peers and classmates. 👫", issue: "peers"}, {text: "Minority groups needing a voice. 📣", issue: "marginalized groups"}, {text: "My neighborhood. 🏘️", issue: "local community"}, {text: "The rights of everyone. 🌟", issue: "universal equality"}]},
+                { text: "4/5 What is my approach?", options: [{text: "Advocating for change. 📢", issue: "advocacy"}, {text: "Collecting data and research. 📊", issue: "data research"}, {text: "Collaborating with local groups. 🤝", issue: "community collaboration"}, {text: "Creating art or creative content. 🎨", issue: "creative expression"}]},
+                { text: "5/5 What is our impact goal?", options: [{text: "Changing how people think. 🧠", issue: "shifting perspectives"}, {text: "Getting a new policy created. 📜", issue: "policy reform"}, {text: "Making places more accessible. 🚪", issue: "accessibility"}, {text: "Making things fairer for everyone. ✨", issue: "equity"}]}
             ],
             'Innovation Explorer (SDGs 9, 11)': [
-                { 
-                    text: "What kind of tech or design excites you?", 
-                    options: [
-                        { text: "Apps, websites, and coding", emoji: "📱", issue: "digital software and app development" },
-                        { text: "Building physical stuff and architecture", emoji: "🏗️", issue: "sustainable building and infrastructure" },
-                        { text: "Eco-friendly energy like solar or wind", emoji: "☀️", issue: "renewable energy technology" },
-                        { text: "Transport like trains, bikes, or cool cars", emoji: "🚀", issue: "future transport and mobility" }
-                    ]
-                },
-                { 
-                    text: "What problem should your invention solve?", 
-                    options: [
-                        { text: "Saving power and energy", emoji: "⚡", issue: "energy efficiency and conservation" },
-                        { text: "Helping people connect or share things better", emoji: "🤝", issue: "community sharing and connectivity" },
-                        { text: "Making things safer for everyone", emoji: "🛡️", issue: "public safety and disaster prevention" },
-                        { text: "Reducing waste or recycling stuff automatically", emoji: "♻️", issue: "circular economy and waste reduction" }
-                    ]
-                }
+                { text: "1/5 Where do I see big problems in how we live?", options: [{text: "Our cities are too crowded, noisy, or polluted. 🏙️", issue: "urban overcrowding"}, {text: "Our buildings and roads aren't safe or strong enough. 🏗️", issue: "crumbling infrastructure"}, {text: "We waste too much energy and power. ⚡", issue: "energy waste"}, {text: "It's hard to get around town easily. 🚌", issue: "inefficient transport"}]},
+                { text: "2/5 What part of this problem bothers me most?", options: [{text: "It's bad for nature. 🌿", issue: "environmental impact"}, {text: "It makes life hard for regular people. 🐢", issue: "quality of life"}, {text: "It's not safe or fair for everyone. ⚠️", issue: "safety and inequality"}, {text: "It costs too much to fix or run. 💸", issue: "economic sustainability"}]},
+                { text: "3/5 Who would benefit from this?", options: [{text: "Students at school. 🎓", issue: "students"}, {text: "The natural environment. 🌿", issue: "ecosystems"}, {text: "Small businesses nearby. 🏪", issue: "the local economy"}, {text: "Everyone in society. 🌎", issue: "society at large"}]},
+                { text: "4/5 What is my method?", options: [{text: "Prototyping and testing designs. 📐", issue: "engineering design"}, {text: "Analyzing data to find answers. 📈", issue: "data research"}, {text: "Urban planning and organization. 🏙️", issue: "urban planning"}, {text: "Creative problem solving. 🧠", issue: "creative innovation"}]},
+                { text: "5/5 What is the final goal?", options: [{text: "Saving money for people. 💰", issue: "economic savings"}, {text: "Making the world more sustainable. 🌱", issue: "sustainability"}, {text: "Making everything easier to use. 👍", issue: "user experience"}, {text: "Making sure we are ready for the future. ⏳", issue: "future-proofing infrastructure"}]}
             ]
         };
 
-        function showScreen(screenId) {
-            document.querySelectorAll('div[id^="screen-"]').forEach(el => el.classList.add('hidden'));
-            document.getElementById(screenId).classList.remove('hidden');
-        }
-
-        function setGoal(goal) {
-            state.goal = goal;
-            showScreen('screen-subject');
-        }
-
-        function setSubject(subject) {
-            state.subject = subject;
-            showScreen('screen-path');
-        }
-
-        function startJourney() {
-            state.quizIndex = 0;
-            state.journeyPath = [];
-            showQuizQuestion();
-        }
-
+        function showScreen(id) { document.querySelectorAll('div[id^="screen-"]').forEach(el => el.classList.add('hidden')); document.getElementById(id).classList.remove('hidden'); }
+        function setGoal(g) { state.goal = g; showScreen('screen-subject'); }
+        function setSubject(s) { state.subject = s; showScreen('screen-path'); }
+        function startJourney() { state.quizIndex = 0; state.journeyPath = []; showQuizQuestion(); }
         function showQuizQuestion() {
             const questions = quizData[state.goal];
-            
-            // If we have answered all questions, move to AI
-            if (state.quizIndex >= questions.length) {
-                // Combine their choices into one specific idea
-                state.idea = "Focusing on " + state.journeyPath.join(" and dealing with ");
-                generateAI();
-                return;
-            }
-
-            // Otherwise, show the current question
-            document.getElementById('quiz-progress').innerText = `Step ${state.quizIndex + 1} of ${questions.length}`;
-            
-            const currentQ = questions[state.quizIndex];
-            document.getElementById('quiz-question').innerText = currentQ.text;
-            
-            const optionsContainer = document.getElementById('quiz-options');
-            optionsContainer.innerHTML = '';
-            
-            currentQ.options.forEach(opt => {
+            if (state.quizIndex >= questions.length) { state.idea = "Focusing on " + state.journeyPath.join(" while thinking about "); generateAI(); return; }
+            const q = questions[state.quizIndex];
+            document.getElementById('quiz-question').innerText = q.text;
+            document.getElementById('quiz-progress').innerText = `Step ${state.quizIndex + 1} of 5`;
+            const container = document.getElementById('quiz-options'); container.innerHTML = '';
+            q.options.forEach(opt => {
                 const btn = document.createElement('button');
-                btn.className = "w-full bg-yellow-50 border-2 border-yellow-200 p-4 rounded-xl card-pop font-medium text-yellow-800 flex items-center justify-between text-left hover:bg-yellow-100";
-                btn.innerHTML = `<span class="text-lg">${opt.text}</span> <span class="text-3xl">${opt.emoji}</span>`;
-                btn.onclick = () => {
-                    state.journeyPath.push(opt.issue);
-                    state.quizIndex++;
-                    showQuizQuestion(); // Load the next question
-                };
-                optionsContainer.appendChild(btn);
+                btn.className = "w-full bg-yellow-50 p-4 rounded-xl border-2 border-yellow-200 text-left font-medium card-pop";
+                btn.innerText = opt.text;
+                btn.onclick = () => { state.journeyPath.push(opt.issue); state.quizIndex++; showQuizQuestion(); };
+                container.appendChild(btn);
             });
-            
             showScreen('screen-quiz');
         }
-
-        function submitIdea() {
-            const ideaInput = document.getElementById('user-idea').value.trim();
-            if (!ideaInput) return alert("Please type an idea first!");
-            state.idea = ideaInput;
-            generateAI();
-        }
-
-        // --- NEW VERCEL BACKEND CALL ---
+        function submitIdea() { state.idea = document.getElementById('user-idea').value; generateAI(); }
         async function generateAI() {
             showScreen('screen-loading');
-
-            const promptText = `
-                You are an AI Co-Pilot for a 10-15 year old student. 
-                They have chosen the Global Goal theme: "${state.goal}".
-                They are doing this inquiry for their "${state.subject}" class.
-                Their specific topic area or idea is: "${state.idea}".
-                
-                Please generate 3 highly engaging, actionable "How might we..." inquiry questions that incorporate elements of ${state.subject}.
-                Use bright, encouraging, and relatable language (student-speak).
-                Format as a clean numbered list. Do not include extra introductions or conclusions, just the questions and a brief sentence explaining why it's a cool idea.
-            `;
-
             try {
-                // We fetch from our secure Vercel API route
-                const response = await fetch('/api/generate', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ prompt: promptText })
-                });
-
-                if (!response.ok) {
-                    throw new Error(`Server returned status ${response.status}`);
-                }
-
-                const data = await response.json();
-                
-                // Extract text from Gemini's response structure
-                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || "Oops, could not read the AI's response.";
-                
+                const res = await fetch('/api/generate', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ prompt: `Student inquiry project on ${state.goal} for ${state.subject}. Context: ${state.idea}. Generate 3 engaging "How might we..." questions for 10-15 year olds. Numbered list.`})});
+                if (!res.ok) throw new Error("Status " + res.status);
+                const data = await res.json();
+                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || data.error || "No response.";
                 document.getElementById('ai-response-container').innerText = aiText;
                 showScreen('screen-results');
-
-            } catch (error) {
-                console.error("Error calling Vercel API:", error);
-                // Enhanced error message to help debug Vercel issues directly on screen
-                let errorMessage = `Oops! The AI Co-Pilot hit a bump in the road.\n\nTechnical Error: ${error.message}`;
-                
-                if (error.message.includes('fetch')) {
-                    errorMessage += "\n\n💡 TIP: It looks like the website cannot find your Vercel backend. Make sure your latest code is fully deployed on Vercel, and that you are playing the game on your live Vercel link, not opening the file directly from your computer.";
-                }
-                
-                document.getElementById('ai-response-container').innerText = errorMessage;
-                showScreen('screen-results');
-            }
+            } catch(e) { document.getElementById('ai-response-container').innerText = "Oops! Error: " + e.message; showScreen('screen-results'); }
         }
     </script>
 </body>
