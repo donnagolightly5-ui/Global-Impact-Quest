@@ -29,7 +29,7 @@
 
     <!-- Screen 2: Goal -->
     <div id="screen-goal" class="hidden max-w-3xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-blue-100">
-        <h2 class="text-3xl font-bold mb-6">Step 1: Pick Your Vibe 🎯</h2>
+        <h2 class="text-3xl font-bold mb-6">Pick Your Vibe 🎯</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
             <button onclick="setGoal('Nature Ninja (SDGs 13-15)')" class="bg-green-100 border-2 border-green-300 p-6 rounded-2xl card-pop text-left">
                 <div class="text-4xl mb-2">🌳</div>
@@ -52,7 +52,7 @@
 
     <!-- Screen 3: Subject -->
     <div id="screen-subject" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-indigo-100">
-        <h2 class="text-3xl font-bold mb-6">Step 2: Link Your Learning 📚</h2>
+        <h2 class="text-3xl font-bold mb-6">Link Your Learning 📚</h2>
         <div class="grid grid-cols-2 gap-4">
             <button onclick="setSubject('Science')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">Science 🔬</button>
             <button onclick="setSubject('Maths')" class="bg-indigo-50 p-4 rounded-xl font-bold text-indigo-700 border-2 border-indigo-200">Maths ➗</button>
@@ -63,7 +63,7 @@
 
     <!-- Screen 4: Path -->
     <div id="screen-path" class="hidden max-w-2xl w-full bg-white rounded-3xl shadow-xl p-8 text-center border-4 border-orange-100">
-        <h2 class="text-3xl font-bold mb-6">Step 3: Choose Your Path 🛤️</h2>
+        <h2 class="text-3xl font-bold mb-6">Choose Your Path 🛤️</h2>
         <button onclick="showScreen('screen-idea')" class="w-full bg-orange-100 p-6 rounded-2xl mb-4 text-left border-2 border-orange-200">Turbocharge My Idea ⚡</button>
         <button onclick="startJourney()" class="w-full bg-sky-100 p-6 rounded-2xl text-left border-2 border-sky-200">Help Me Find My Passion 🧭</button>
     </div>
@@ -100,32 +100,32 @@
         
         const quizData = {
             'Nature Ninja (SDGs 13-15)': [
-                { text: "1/5 Where do I see the most damage to nature?", options: [{text: "Our oceans and beaches are being trashed. 🌊", issue: "marine pollution"}, {text: "Our forests and bush are disappearing. 🌲", issue: "deforestation"}, {text: "Native animals are losing their homes. 🐢", issue: "habitat loss"}, {text: "The city air and water are dirty. 🏙️", issue: "urban environmental degradation"}]},
+                { text: "1/5 Which environment calls to me?", options: [{text: "Our vast oceans and beautiful beaches. 🌊", issue: "ocean conservation"}, {text: "The forests and native bushland. 🌲", issue: "forest protection"}, {text: "Wildlife and endangered animal species. 🐢", issue: "wildlife preservation"}, {text: "Parks and nature in our city streets. 🏙️", issue: "urban green spaces"}]},
                 { text: "2/5 What is the biggest threat here?", options: [{text: "Plastic waste clogging ecosystems. 🗑️", issue: "plastic pollution"}, {text: "Climate change and weird weather. 🌪️", issue: "climate change"}, {text: "Buildings taking over habitats. 🏗️", issue: "habitat loss"}, {text: "Water pollution from chemicals. 🧪", issue: "water toxicity"}]},
                 { text: "3/5 Who are we standing up for?", options: [{text: "Our local neighborhood community. 🏡", issue: "local communities"}, {text: "The generations of the future. ⏳", issue: "future generations"}, {text: "The animals who can't speak. 🐾", issue: "animal rights"}, {text: "Our school environment. 🏫", issue: "the school environment"}]},
                 { text: "4/5 How do I want to take action?", options: [{text: "Building cool tech or tools. 🛠️", issue: "technological engineering"}, {text: "Running campaigns and advocating. 📣", issue: "social advocacy"}, {text: "Doing scientific experiments. 🔬", issue: "scientific investigation"}, {text: "Creating art or stories to explain it. 🎨", issue: "creative communication"}]},
                 { text: "5/5 What would success look like?", options: [{text: "Restoring nature to its natural state. ✨", issue: "ecosystem restoration"}, {text: "Changing a law or school rule. ⚖️", issue: "policy reform"}, {text: "Creating a new innovation that helps. 💡", issue: "technological innovation"}, {text: "Getting the community involved. 🤝", issue: "community activism"}]}
             ],
             'Hauora Hero (SDG 3)': [
-                { text: "1/5 Where do I see people struggling the most?", options: [{text: "Kids at school feel really down or stressed. 🎒", issue: "teen mental health"}, {text: "People in my family don't look after themselves. 👨‍👩‍👧‍👦", issue: "family wellness"}, {text: "People in our town are lonely or excluded. 🏘️", issue: "social isolation"}, {text: "Everyone seems running on empty and tired. 🏃", issue: "general wellbeing"}]},
+                { text: "1/5 Who is the main person we are helping?", options: [{text: "My friends and classmates. 🎒", issue: "teenagers"}, {text: "Young children in my area. 🧸", issue: "children"}, {text: "Families who need support. 👨‍👩‍👧‍👦", issue: "families"}, {text: "The general public in my town. 🏘️", issue: "the community"}]},
                 { text: "2/5 What is the main challenge they face?", options: [{text: "Feeling stressed, anxious, or overwhelmed. 😥", issue: "mental health"}, {text: "Not having healthy food to eat. 🥗", issue: "nutrition access"}, {text: "Not being active enough. 🏃", issue: "physical fitness"}, {text: "Spending too much time on screens. 📱", issue: "digital wellbeing"}]},
                 { text: "3/5 Where do we want to make change?", options: [{text: "Here at our school. 🏫", issue: "education setting"}, {text: "In people's homes. 🏠", issue: "domestic setting"}, {text: "In digital online spaces. 🌐", issue: "digital environments"}, {text: "In public parks or clubs. ⚽", issue: "recreational spaces"}]},
                 { text: "4/5 How do I want to help?", options: [{text: "By mentoring or talking to others. 🗣️", issue: "peer mentoring"}, {text: "By building a digital app or tool. 💻", issue: "digital tools"}, {text: "By organizing fun events. 🎉", issue: "social events"}, {text: "By raising awareness. 📢", issue: "awareness campaigns"}]},
                 { text: "5/5 What do we want to see happen?", options: [{text: "People feeling genuinely happier. 😊", issue: "improved wellbeing"}, {text: "Better daily habits and routines. 📅", issue: "behavioral change"}, {text: "A reduction in stress levels. 🧘", issue: "stress reduction"}, {text: "Stronger social connections. 🤝", issue: "community connection"}]}
             ],
             'Equality Champion (SDGs 5, 10)': [
-                { text: "1/5 Where do I see people treated unfairly?", options: [{text: "At school, where some kids get left out. 🏫", issue: "school inequality"}, {text: "Online, where people are mean or biased. 💻", issue: "digital exclusion"}, {text: "In sports and clubs where some don't have a chance. 🏏", issue: "unfair competition"}, {text: "In the wider world where people are treated differently. 📺", issue: "systemic injustice"}]},
+                { text: "1/5 Which issue matters most to me?", options: [{text: "Racial and cultural diversity. 🌍", issue: "racial equality"}, {text: "Gender fairness and stereotypes. ⚖️", issue: "gender equality"}, {text: "Fair treatment regardless of money. 💸", issue: "economic equality"}, {text: "Accessibility for people with disabilities. ♿", issue: "inclusive accessibility"}]},
                 { text: "2/5 Where is the problem most visible?", options: [{text: "In the school system. 🏫", issue: "the education system"}, {text: "On social media platforms. 💻", issue: "digital media bias"}, {text: "In sports and clubs. 🏏", issue: "extracurricular activities"}, {text: "In society and the news. 📺", issue: "global society"}]},
                 { text: "3/5 Who are we standing up for?", options: [{text: "My peers and classmates. 👫", issue: "peers"}, {text: "Minority groups needing a voice. 📣", issue: "marginalized groups"}, {text: "My neighborhood. 🏘️", issue: "local community"}, {text: "The rights of everyone. 🌟", issue: "universal equality"}]},
                 { text: "4/5 What is my approach?", options: [{text: "Advocating for change. 📢", issue: "advocacy"}, {text: "Collecting data and research. 📊", issue: "data research"}, {text: "Collaborating with local groups. 🤝", issue: "community collaboration"}, {text: "Creating art or creative content. 🎨", issue: "creative expression"}]},
                 { text: "5/5 What is our impact goal?", options: [{text: "Changing how people think. 🧠", issue: "shifting perspectives"}, {text: "Getting a new policy created. 📜", issue: "policy reform"}, {text: "Making places more accessible. 🚪", issue: "accessibility"}, {text: "Making things fairer for everyone. ✨", issue: "equity"}]}
             ],
             'Innovation Explorer (SDGs 9, 11)': [
-                { text: "1/5 Where do I see big problems in how we live?", options: [{text: "Our cities are too crowded, noisy, or polluted. 🏙️", issue: "urban overcrowding"}, {text: "Our buildings and roads aren't safe or strong enough. 🏗️", issue: "crumbling infrastructure"}, {text: "We waste too much energy and power. ⚡", issue: "energy waste"}, {text: "It's hard to get around town easily. 🚌", issue: "inefficient transport"}]},
-                { text: "2/5 What part of this problem bothers me most?", options: [{text: "It's bad for nature. 🌿", issue: "environmental impact"}, {text: "It makes life hard for regular people. 🐢", issue: "quality of life"}, {text: "It's not safe or fair for everyone. ⚠️", issue: "safety and inequality"}, {text: "It costs too much to fix or run. 💸", issue: "economic sustainability"}]},
-                { text: "3/5 Who would benefit from this?", options: [{text: "Students at school. 🎓", issue: "students"}, {text: "The natural environment. 🌿", issue: "ecosystems"}, {text: "Small businesses nearby. 🏪", issue: "the local economy"}, {text: "Everyone in society. 🌎", issue: "society at large"}]},
-                { text: "4/5 What is my method?", options: [{text: "Prototyping and testing designs. 📐", issue: "engineering design"}, {text: "Analyzing data to find answers. 📈", issue: "data research"}, {text: "Urban planning and organization. 🏙️", issue: "urban planning"}, {text: "Creative problem solving. 🧠", issue: "creative innovation"}]},
-                { text: "5/5 What is the final goal?", options: [{text: "Saving money for people. 💰", issue: "economic savings"}, {text: "Making the world more sustainable. 🌱", issue: "sustainability"}, {text: "Making everything easier to use. 👍", issue: "user experience"}, {text: "Making sure we are ready for the future. ⏳", issue: "future-proofing infrastructure"}]}
+                { text: "1/5 Which area of our world needs fresh thinking?", options: [{text: "Our transport and movement. 🚀", issue: "future transport"}, {text: "How we build our homes and cities. 🏗️", issue: "sustainable building"}, {text: "How we power our lives with energy. ☀️", issue: "renewable energy"}, {text: "Digital tools and how we connect online. 📱", issue: "software development"}]},
+                { text: "2/5 What is the main problem we face here?", options: [{text: "We waste too much energy. ⚡", issue: "energy efficiency"}, {text: "Things are hard to use for some people. 🖐️", issue: "accessibility"}, {text: "We create way too much trash. ♻️", issue: "waste reduction"}, {text: "Places feel unsafe or unwelcoming. 🛡️", issue: "public safety"}]},
+                { text: "3/5 Who would benefit most from a solution?", options: [{text: "Students at school. 🎓", issue: "students"}, {text: "The natural environment. 🌿", issue: "ecosystems"}, {text: "Small local businesses. 🏪", issue: "the local economy"}, {text: "Everyone in society. 🌎", issue: "society at large"}]},
+                { text: "4/5 What is my best method for solving it?", options: [{text: "Prototyping and testing new designs. 📐", issue: "engineering design"}, {text: "Analyzing data to find real answers. 📈", issue: "data research"}, {text: "Planning better urban spaces. 🏙️", issue: "urban planning"}, {text: "Creative problem solving. 🧠", issue: "creative innovation"}]},
+                { text: "5/5 What is the final goal?", options: [{text: "Saving money for regular people. 💰", issue: "economic savings"}, {text: "Making the world more sustainable. 🌱", issue: "sustainability"}, {text: "Making everything easier to use. 👍", issue: "user experience"}, {text: "Future-proofing our infrastructure. ⏳", issue: "future-proofing infrastructure"}]}
             ]
         };
 
@@ -153,13 +153,26 @@
         async function generateAI() {
             showScreen('screen-loading');
             try {
-                const res = await fetch('/api/generate', { method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({ prompt: `Student inquiry project on ${state.goal} for ${state.subject}. Context: ${state.idea}. Generate 3 engaging "How might we..." questions for 10-15 year olds. Numbered list.`})});
+                // FIXED: Using window.location.origin to ensure the path is always correct
+                const res = await fetch(window.location.origin + '/api/generate', { 
+                    method: 'POST', 
+                    headers: {'Content-Type': 'application/json'}, 
+                    body: JSON.stringify({ prompt: `Student inquiry project on ${state.goal} for ${state.subject}. Context: ${state.idea}. Generate 3 engaging "How might we..." questions for 10-15 year olds. Numbered list.`})
+                });
+                
                 if (!res.ok) throw new Error("Status " + res.status);
+                
                 const data = await res.json();
-                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || data.error || "No response.";
+                
+                // Extract text from Google's response structure
+                const aiText = data.candidates?.[0]?.content?.parts?.[0]?.text || data.error || "No response received.";
+                
                 document.getElementById('ai-response-container').innerText = aiText;
                 showScreen('screen-results');
-            } catch(e) { document.getElementById('ai-response-container').innerText = "Oops! Error: " + e.message; showScreen('screen-results'); }
+            } catch(e) { 
+                document.getElementById('ai-response-container').innerText = "Oops! Error: " + e.message; 
+                showScreen('screen-results'); 
+            }
         }
     </script>
 </body>
