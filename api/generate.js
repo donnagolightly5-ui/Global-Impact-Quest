@@ -1,51 +1,42 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2870
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+export default async function handler(req, res) {
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method Not Allowed' });
+  }
 
-\f0\fs24 \cf0 export default async function handler(req, res) \{\
-  // Only allow POST requests\
-  if (req.method !== 'POST') \{\
-    return res.status(405).json(\{ error: 'Method Not Allowed' \});\
-  \}\
-\
-  const \{ prompt \} = req.body;\
-  const apiKey = process.env.GEMINI_API_KEY;\
-\
-  // Ensure the API key exists in Vercel's environment variables\
-  if (!apiKey) \{\
-    return res.status(500).json(\{ error: 'API key is missing in server environment.' \});\
-  \}\
-\
-  try \{\
-    // Call the Gemini API securely from the backend\
-    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, \{\
-      method: 'POST',\
-      headers: \{\
-        'Content-Type': 'application/json',\
-      \},\
-      body: JSON.stringify(\{\
-        contents: [\{ parts: [\{ text: prompt \}] \}],\
-        systemInstruction: \{\
-          parts: [\{ text: "You are an inspiring AI Co-Pilot for 10-15 year old students. Keep responses bright, encouraging, and easy to understand. Generate ONLY the 3 inquiry questions requested." \}]\
-        \}\
-      \})\
-    \});\
-\
-    const data = await response.json();\
-    \
-    // Check if the API returned an error\
-    if (data.error) \{\
-      throw new Error(data.error.message);\
-    \}\
-\
-    // Send the AI's response back to the frontend game\
-    return res.status(200).json(data);\
-    \
-  \} catch (error) \{\
-    console.error("Backend AI Error:", error);\
-    return res.status(500).json(\{ error: 'Failed to communicate with AI Co-Pilot.' \});\
-  \}\
-\}}
+  const { prompt } = req.body;
+  const apiKey = process.env.GEMINI_API_KEY;
+
+  if (!apiKey) {
+    return res.status(500).json({ error: 'API key is missing in Vercel Environment Variables.' });
+  }
+
+  try {
+    // Calling the stable Gemini 1.5 Flash model
+    const response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${apiKey}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        contents: [{ parts: [{ text: prompt }] }],
+        systemInstruction: {
+          parts: [{ text: "You are an inspiring AI Co-Pilot for 10-15 year old students. Keep responses bright, encouraging, and easy to understand. Generate ONLY the 3 inquiry questions requested." }]
+        }
+      })
+    });
+
+    const data = await response.json();
+    
+    // If Google sends back an error, catch it
+    if (data.error) {
+      throw new Error(data.error.message);
+    }
+
+    return res.status(200).json(data);
+    
+  } catch (error) {
+    console.error("Backend AI Error:", error);
+    // Send the EXACT error to the screen so we can see what's wrong
+    return res.status(500).json({ error: error.message });
+  }
+}
